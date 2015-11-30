@@ -219,9 +219,8 @@ wordstem(c("win", "winning", "wins", "won", "winner"))
 but it's fast.
 
 Stemmed objects must be tokenized, but can be of many different quanteda classes:
-```{r, error = TRUE}
+```{r}
 methods(wordstem)
-wordstem("This is a winning package, of many packages.")
 wordstem(tokenize("This is a winning package, of many packages."))
 head(wordstem(dfm(inaugTexts[1:2], verbose = FALSE)))
 # same as 

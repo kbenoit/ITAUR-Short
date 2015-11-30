@@ -287,7 +287,7 @@ dfmsInaug2 &lt;- dfm(subset(inaugCorpus, Year&gt;1980),
 ##    ... removed 128 features, from 174 supplied (glob) feature types
 ##    ... created a 9 x 2985 sparse dfm
 ##    ... complete. 
-## Elapsed time: 0.346 seconds.</code></pre>
+## Elapsed time: 0.404 seconds.</code></pre>
 <p>Or can be done <strong>after</strong> creating a dfm:</p>
 <pre class="r"><code>myDfm &lt;- dfm(c(&quot;My Christmas was ruined by your opposition tax plan.&quot;,
                &quot;Does the United_States or Sweden have more progressive taxation?&quot;),
@@ -347,7 +347,7 @@ features(dfm(testCorpus, ignoredFeatures = stopwords(&quot;english&quot;)))</cod
 ##    ... removed 7 features, from 174 supplied (glob) feature types
 ##    ... created a 1 x 12 sparse dfm
 ##    ... complete. 
-## Elapsed time: 0.009 seconds.</code></pre>
+## Elapsed time: 0.007 seconds.</code></pre>
 <pre><code>##  [1] &quot;quick&quot;     &quot;brown&quot;     &quot;fox&quot;       &quot;named&quot;     &quot;seamus&quot;   
 ##  [6] &quot;jumps&quot;     &quot;lazy&quot;      &quot;dog&quot;       &quot;also&quot;      &quot;newspaper&quot;
 ## [11] &quot;boy&quot;       &quot;mouth&quot;</code></pre>
@@ -361,7 +361,7 @@ features(dfm(testCorpus, ngrams = 2, ignoredFeatures = stopwords(&quot;english&q
 ##    ... removed 13 features, from 174 supplied (glob) feature types
 ##    ... created a 1 x 9 sparse dfm
 ##    ... complete. 
-## Elapsed time: 0.011 seconds.</code></pre>
+## Elapsed time: 0.007 seconds.</code></pre>
 <pre><code>## [1] &quot;quick_brown&quot;  &quot;brown_fox&quot;    &quot;fox_named&quot;    &quot;named_seamus&quot;
 ## [5] &quot;seamus_jumps&quot; &quot;lazy_dog&quot;     &quot;dog_also&quot;     &quot;also_named&quot;  
 ## [9] &quot;boy_named&quot;</code></pre>
@@ -374,7 +374,7 @@ features(dfm(testCorpus, ngrams = 2, ignoredFeatures = stopwords(&quot;english&q
 ##    ... removed 20 features, from 174 supplied (glob) feature types
 ##    ... created a 1 x 21 sparse dfm
 ##    ... complete. 
-## Elapsed time: 0.008 seconds.</code></pre>
+## Elapsed time: 0.007 seconds.</code></pre>
 <pre><code>##  [1] &quot;quick&quot;        &quot;brown&quot;        &quot;fox&quot;          &quot;named&quot;       
 ##  [5] &quot;seamus&quot;       &quot;jumps&quot;        &quot;lazy&quot;         &quot;dog&quot;         
 ##  [9] &quot;also&quot;         &quot;newspaper&quot;    &quot;boy&quot;          &quot;mouth&quot;       
@@ -393,7 +393,7 @@ features(dfm(tokensNgramsNoStopwords, ngrams = 1:2))</code></pre>
 ##    ... indexing features: 13 feature types
 ##    ... created a 1 x 13 sparse dfm
 ##    ... complete. 
-## Elapsed time: 0.004 seconds.</code></pre>
+## Elapsed time: 0.008 seconds.</code></pre>
 <pre><code>##  [1] &quot;quick_brown&quot;      &quot;brown_fox&quot;        &quot;fox_named&quot;       
 ##  [4] &quot;named_seamus&quot;     &quot;seamus_jumps&quot;     &quot;jumps_lazy&quot;      
 ##  [7] &quot;lazy_dog&quot;         &quot;dog_also&quot;         &quot;also_named&quot;      
@@ -425,7 +425,7 @@ dfm(testTweets, keptFeatures = &quot;#*&quot;, removeTwitter = FALSE)  # keep on
 ##    ... kept 6 features, from 1 supplied (glob) feature types
 ##    ... created a 3 x 6 sparse dfm
 ##    ... complete. 
-## Elapsed time: 0.008 seconds.</code></pre>
+## Elapsed time: 0.007 seconds.</code></pre>
 <pre><code>## Document-feature matrix of: 3 documents, 6 features.
 ## 3 x 6 sparse Matrix of class &quot;dfmSparse&quot;
 ##        features
@@ -447,7 +447,7 @@ dfm(testTweets, keptFeatures = &quot;#*&quot;, removeTwitter = FALSE)  # keep on
 ##    ... kept 6 features, from 1 supplied (regex) feature types
 ##    ... created a 3 x 6 sparse dfm
 ##    ... complete. 
-## Elapsed time: 0.008 seconds.</code></pre>
+## Elapsed time: 0.007 seconds.</code></pre>
 <pre><code>## Document-feature matrix of: 3 documents, 6 features.
 ## 3 x 6 sparse Matrix of class &quot;dfmSparse&quot;
 ##        features
@@ -509,7 +509,7 @@ dfm(inaugTexts, dictionary=lgdict)</code></pre>
 ##    ... applying a dictionary consisting of 20 keys
 ##    ... created a 57 x 20 sparse dfm
 ##    ... complete. 
-## Elapsed time: 0.735 seconds.</code></pre>
+## Elapsed time: 0.724 seconds.</code></pre>
 <pre><code>## Document-feature matrix of: 57 documents, 20 features.</code></pre>
 <pre class="r"><code># import a LIWC formatted dictionary
 liwcdict &lt;- dictionary(file = &quot;http://www.kenbenoit.net/files/LIWC2001_English.dic&quot;,
@@ -523,7 +523,7 @@ dfm(inaugTexts, dictionary=liwcdict)</code></pre>
 ##    ... applying a dictionary consisting of 68 keys
 ##    ... created a 57 x 68 sparse dfm
 ##    ... complete. 
-## Elapsed time: 4.65 seconds.</code></pre>
+## Elapsed time: 4.645 seconds.</code></pre>
 <pre><code>## Document-feature matrix of: 57 documents, 68 features.</code></pre>
 <p>We apply dictionaries to a dfm using the <code>applyDictionary()</code> function. Through the <code>valuetype</code>, argument, we can match patterns of one of three types: <code>&quot;glob&quot;</code>, <code>&quot;regex&quot;</code>, or <code>&quot;fixed&quot;</code>.</p>
 <pre class="r"><code>myDict &lt;- dictionary(list(christmas = c(&quot;Christmas&quot;, &quot;Santa&quot;, &quot;holiday&quot;),
@@ -614,7 +614,7 @@ dictDfm &lt;- dfm(mycorpus, dictionary=mydict)</code></pre>
 ##    ... applying a dictionary consisting of 6 keys
 ##    ... created a 29 x 6 sparse dfm
 ##    ... complete. 
-## Elapsed time: 0.09 seconds.</code></pre>
+## Elapsed time: 0.188 seconds.</code></pre>
 <pre class="r"><code>head(dictDfm)</code></pre>
 <pre><code>## Document-feature matrix of: 29 documents, 6 features.
 ## (showing first 6 documents and first 6 features)
@@ -639,7 +639,7 @@ dfm(mytexts, thesaurus = mydict)</code></pre>
 ##    ... applying a dictionary consisting of 2 keys
 ##    ... created a 2 x 11 sparse dfm
 ##    ... complete. 
-## Elapsed time: 0.016 seconds.</code></pre>
+## Elapsed time: 0.025 seconds.</code></pre>
 <pre><code>## Document-feature matrix of: 2 documents, 11 features.
 ## 2 x 11 sparse Matrix of class &quot;dfmSparse&quot;
 ##       british english differently with more american as one word COLOR
@@ -666,8 +666,6 @@ dfm(mytexts, thesaurus = mydict)</code></pre>
 <pre><code>## [1] wordstem.character*      wordstem.dfm*           
 ## [3] wordstem.tokenizedTexts*
 ## see '?methods' for accessing help and source code</code></pre>
-<pre class="r"><code>wordstem(&quot;This is a winning package, of many packages.&quot;)</code></pre>
-<pre><code>## Error in wordstem.character(&quot;This is a winning package, of many packages.&quot;): whitespace detected: you can only stem tokenized texts</code></pre>
 <pre class="r"><code>wordstem(tokenize(&quot;This is a winning package, of many packages.&quot;))</code></pre>
 <pre><code>## tokenizedText object from 1 document.
 ## Component 1 :
@@ -725,7 +723,7 @@ summary(txt)</code></pre>
 ##          UKIP   311    633        38
 ## 
 ## Source:  /home/paul/Dropbox/QUANTESS/courses/ITAUR-Short/ITAUR-Short-paul-gh/2_descriptive/* on x86_64 by paul
-## Created: Sun Nov 29 18:20:31 2015
+## Created: Mon Nov 30 15:48:20 2015
 ## Notes:   Created as a demo.</code></pre>
 <p>To access the <strong>syllables</strong> of a text, we use <code>syllables()</code>:</p>
 <pre class="r"><code>syllables(c(&quot;Superman.&quot;, &quot;supercalifragilisticexpialidocious&quot;, &quot;The cat in the hat.&quot;))</code></pre>
@@ -757,7 +755,7 @@ presDfm &lt;- dfm(inaugCorpus, ignoredFeatures = stopwords(&quot;english&quot;))
 ##    ... removed 133 features, from 174 supplied (glob) feature types
 ##    ... created a 57 x 9081 sparse dfm
 ##    ... complete. 
-## Elapsed time: 0.195 seconds.</code></pre>
+## Elapsed time: 0.537 seconds.</code></pre>
 <pre class="r"><code># compute some document similarities
 similarity(presDfm, &quot;1985-Reagan&quot;, n=5, margin=&quot;documents&quot;)</code></pre>
 <pre><code>##  1981-Reagan 1997-Clinton   2013-Obama   1969-Nixon   1973-Nixon 
