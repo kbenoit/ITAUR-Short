@@ -358,7 +358,3 @@ topfeatures(myDfm1)
 topfeatures(myDfm2) # without stopwords
 ```
 
-
-
-
-

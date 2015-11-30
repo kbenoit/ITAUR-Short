@@ -6,7 +6,7 @@
 [Kenneth Benoit](kbenoit@lse.ac.uk), Department of Methodology, LSE  
 [Paul Nulty](p.nulty@lse.ac.uk), Department of Methodology, LSE  
 
-**Version:** 27 November 2015
+**Version:** 30 November 2015
 
 This repository contains the workshop materials for the short workshop [Quantitative to Text Analysis Using R](http://www.gesis.org/css-wintersymposium/program/workshops-tutorials/quantitative-text-analysis-using-r/) taught on December 1, 2015 by Kenneth Benoit and Paul Nulty.  This workshop is part of the pre-conference training sessions of the GESIS Computational Social Science Winter Symposium, 1-3 December 2015.  Ken Benoit and Paul Nulty's involvement is supported through European Research Council grant ERC-2011-StG 283794-QUANTESS.
 
@@ -29,7 +29,6 @@ This workshop covers how to perform common text analysis and natural language pr
 The course consists of instructor presentations in three sets, followed by exercises that students are meant to do in class.  Computers should be available, but we suggest you bring your own.
 
 We will cover how to format and input source texts, how to structure their metadata, and how to prepare them for analysis.  This includes common tasks such as tokenisation, including constructing ngrams and "skip-grams", removing stopwords, stemming words, and other forms of feature selection.  We show how to: get summary statistics from text, search for and analyse keywords and phrases, analyse text for lexical diversity and readability,  detect collocations, apply dictionaries, and measure term and document associations using distance measures.  Our analysis covers basic text-related data processing in the R base language, but most relies on the “quanteda” (https://github.com/kbenoit/quanteda) package for the quantitative analysis of textual data.  We also cover how to pass the structured objects from quanteda into other text analytic packages for doing topic modelling, latent semantic analysis, regression models, and other forms of machine learning.
-
 
 
 ### Prerequisites
