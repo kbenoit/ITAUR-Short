@@ -50,12 +50,12 @@ While it is designed for those who have used R in some form previously, expertis
 
 ### Part 2: Descriptive text analysis using R
 
-*  [Descriptive analysis of texts](http://htmlpreview.github.com/?https://github.com/kbenoit/ITAUR-Short/blob/master/2_descriptive/2_descriptive.html)
+*  [Descriptive analysis of texts](http://htmlpreview.github.io/?https://github.com/kbenoit/ITAUR-Short/blob/master/2_descriptive/2_descriptive.html)
 *  **Exercise:** Step through execution of the [.Rmd file](2_descriptive/2_descriptive.Rmd).
 
 ### Part 3: Advanced analysis and working with other text packages
 
-*  [Advanced analysis and working with other packages](http://htmlpreview.github.com/?https://github.com/kbenoit/ITAUR-Short/blob/master3_advanced/advanced.html)
+*  [Advanced analysis and working with other packages](http://htmlpreview.github.io/?https://github.com/kbenoit/ITAUR-Short/blob/master3_advanced/advanced.html)
 *  **Exercise:** Step through execution of the [.Rmd file](3_advanced/advanced.Rmd)
 *  **Twitter analysis example**, and the instructions for setting up your own Twitter app, in [Twitter.Rmd](3_advanced/Twitter.Rmd). 
 
