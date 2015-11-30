@@ -41,7 +41,7 @@ While it is designed for those who have used R in some form previously, expertis
 *  [CRAN](https://cran.r-project.org) for downloading and installing R
 *  [GitHub page for the **quanteda** package](https://github.com/kbenoit/quanteda)
 *  Additional packages to install:  STM, topicmodels, glmnet
-*  [Getting started, text import, and basic analysis](http://htmlpreview.github.com/?https://github.com/kbenoit/ITAUR-Short/1_getting_started/1_getting_started.html)
+*  [Getting started, text import, and basic analysis](http://htmlpreview.github.com/?https://github.com/kbenoit/ITAUR-Short/blob/master/1_getting_started/1_getting_started.html)
 *  **Exercise:** Step through execution of the [.Rmd file](1_getting_started/1_getting_started.Rmd).
 *  Sample data files: [SOTU_metadata.csv](https://github.com/kbenoit/ITAUR/blob/master/data/SOTU_metadata.csv), [inaugTexts.csv](https://github.com/kbenoit/ITAUR/blob/master/data/inaugTexts.csv), [tweetSample.RData](https://github.com/kbenoit/ITAUR/blob/master/data/tweetSample.RData)
 
@@ -50,12 +50,12 @@ While it is designed for those who have used R in some form previously, expertis
 
 ### Part 2: Descriptive text analysis using R
 
-*  [Descriptive analysis of texts](http://htmlpreview.github.com/?https://github.com/kbenoit/ITAUR-Short/2_descriptive/2_descriptive.html)
+*  [Descriptive analysis of texts](http://htmlpreview.github.com/?https://github.com/kbenoit/ITAUR-Short/blob/master/2_descriptive/2_descriptive.html)
 *  **Exercise:** Step through execution of the [.Rmd file](2_descriptive/2_descriptive.Rmd).
 
 ### Part 3: Advanced analysis and working with other text packages
 
-*  [Advanced analysis and working with other packages](http://htmlpreview.github.com/?https://github.com/kbenoit/ITAUR-Short/3_advanced/advanced.html)
+*  [Advanced analysis and working with other packages](http://htmlpreview.github.com/?https://github.com/kbenoit/ITAUR-Short/blob/master3_advanced/advanced.html)
 *  **Exercise:** Step through execution of the [.Rmd file](3_advanced/advanced.Rmd)
 *  **Twitter analysis example**, and the instructions for setting up your own Twitter app, in [Twitter.Rmd](3_advanced/Twitter.Rmd). 
 
