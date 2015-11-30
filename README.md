@@ -47,8 +47,9 @@ Setting up RStudio and **quanteda**:
 
 Basic Text Analysis:  
 
-*  [Getting started, text import, and basic analysis](https://github.com/kbenoit/ITAUR-Short/blob/master/1_getting_started/1_getting_started.Rmd)
-*  **Exercise:** Step through execution of the [.Rmd file](1_getting_started/1_getting_started.Rmd).
+*  [Getting started, text import, and basic analysis](1_getting_started/1_getting_started.Rmd)
+*  Study this (**recommended work flow**)[workflow.Rmd] document.
+*  **Exercise:** Step through execution of the [.Rmd file](1_getting_started/1_getting_started.Rmd)
 *  Sample data files: [SOTU_metadata.csv](https://github.com/kbenoit/ITAUR/blob/master/data/SOTU_metadata.csv), [inaugTexts.csv](https://github.com/kbenoit/ITAUR/blob/master/data/inaugTexts.csv), [tweetSample.RData](https://github.com/kbenoit/ITAUR/blob/master/data/tweetSample.RData)
 
 
@@ -62,6 +63,7 @@ Basic Text Analysis:
 *  [Advanced analysis and working with other packages](http://htmlpreview.github.io/?https://github.com/kbenoit/ITAUR-Short/blob/master/3_advanced/advanced.html)
 *  **Exercise:** Step through execution of the [.Rmd file](3_advanced/advanced.Rmd)
 *  **Twitter analysis example**, and the instructions for setting up your own Twitter app, in [Twitter.Rmd](3_advanced/Twitter.Rmd). 
+
 
 ### Additional Resources
 
