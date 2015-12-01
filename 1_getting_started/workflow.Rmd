@@ -36,7 +36,7 @@ One of the most fundamental text analysis tasks is tokenization. To tokenize a t
 `quanteda`'s tokenize function can be used on a simple character vector, a vector of character vectors, or a corpus. Here are some examples:
 
 ```{r}
-tokens <- tokenize('Today is Thursday in Canberra. It is yesterday in London.')
+tokenize('Today is Thursday in Canberra. It is yesterday in London.')
 
 vec <- c(one='This is text one', two='This, however, is the second text')
 tokenize(vec)
@@ -93,7 +93,7 @@ summary(recentCorpus)
 ```
 
 We can use this metadata to combine features across documents when creating a document-feature matrix:
-```{r  fig.width=10, fig.height=8, warning=FALSE}
-partyDfm <- dfm(recentCorpus, groups='Party', ignoredFeatures=(stopwords('english')))
+```{r fig.width=10, fig.height=8, warning=FALSE}
+partyDfm <- dfm(recentCorpus, groups='Party', ignoredFeatures=stopwords('english'), verbose = FALSE)
 plot(partyDfm, comparison=TRUE)
-``
+```

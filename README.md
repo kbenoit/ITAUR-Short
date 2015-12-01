@@ -6,7 +6,7 @@
 [Kenneth Benoit](kbenoit@lse.ac.uk), Department of Methodology, LSE  
 [Paul Nulty](p.nulty@lse.ac.uk), Department of Methodology, LSE  
 
-**Version:** 30 November 2015
+**Version:** 1 December 2015
 
 This repository contains the workshop materials for the short workshop [Quantitative to Text Analysis Using R](http://www.gesis.org/css-wintersymposium/program/workshops-tutorials/quantitative-text-analysis-using-r/) taught on December 1, 2015 by Kenneth Benoit and Paul Nulty.  This workshop is part of the pre-conference training sessions of the GESIS Computational Social Science Winter Symposium, 1-3 December 2015.  Ken Benoit and Paul Nulty's involvement is supported through European Research Council grant ERC-2011-StG 283794-QUANTESS.
 
@@ -48,7 +48,7 @@ Setting up RStudio and **quanteda**:
 Basic Text Analysis:  
 
 *  [Getting started, text import, and basic analysis](1_getting_started/1_getting_started.Rmd)
-*  Study this (**recommended work flow**)[workflow.Rmd] document.
+*  Study this [**recommended work flow**](workflow.Rmd) document.
 *  **Exercise:** Step through execution of the [.Rmd file](1_getting_started/1_getting_started.Rmd)
 *  Sample data files: [SOTU_metadata.csv](https://github.com/kbenoit/ITAUR/blob/master/data/SOTU_metadata.csv), [inaugTexts.csv](https://github.com/kbenoit/ITAUR/blob/master/data/inaugTexts.csv), [tweetSample.RData](https://github.com/kbenoit/ITAUR/blob/master/data/tweetSample.RData)
 
