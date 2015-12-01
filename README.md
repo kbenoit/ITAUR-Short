@@ -48,7 +48,7 @@ Setting up RStudio and **quanteda**:
 Basic Text Analysis:  
 
 *  [Getting started, text import, and basic analysis](1_getting_started/1_getting_started.Rmd)
-*  Study this [**recommended work flow**](workflow.Rmd) document.
+*  Study this [**recommended work flow**](1_getting_started/workflow.Rmd) document.
 *  **Exercise:** Step through execution of the [.Rmd file](1_getting_started/1_getting_started.Rmd)
 *  Sample data files: [SOTU_metadata.csv](https://github.com/kbenoit/ITAUR/blob/master/data/SOTU_metadata.csv), [inaugTexts.csv](https://github.com/kbenoit/ITAUR/blob/master/data/inaugTexts.csv), [tweetSample.RData](https://github.com/kbenoit/ITAUR/blob/master/data/tweetSample.RData)
 
