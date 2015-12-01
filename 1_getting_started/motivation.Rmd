@@ -61,7 +61,7 @@ output: beamer_presentation
         *   multi-word expressions, through `phrasetotoken`
     *  in this step we also apply rules that will keep or ignore elements, such as 
         * punctuation
-        * digitsm, including or currency-prefixed digits
+        * digits, including or currency-prefixed digits
         * URLs
         * Twitter tags
         * inter-token separators

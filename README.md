@@ -43,7 +43,7 @@ Setting up RStudio and **quanteda**:
 *  [CRAN](https://cran.r-project.org) for downloading and installing R
 *  [GitHub page for the **quanteda** package](https://github.com/kbenoit/quanteda)
 *  Additional packages to install:  STM, topicmodels, glmnet
-*  **Configuration test:**  Try running this RMarkdown file: [test_setup.Rmd](1_getting_started/test_setup.Rmd).  If it builds without error and looks like [this](http://htmlpreview.github.io/?https://github.com/kbenoit/ITAUR-Short/blob/master/1_getting_started/test_setup.html), then you have successfully configured your system.  
+*  **Configuration test:**  Try running this RMarkdown file: [test_setup.Rmd](1_getting_started/test_setup.Rmd).  If it builds without error and looks like [this](https://rawgit.com/kbenoit/ITAUR-Short/master/1_getting_started/test_setup.html), then you have successfully configured your system.  
 
 Basic Text Analysis:  
 
@@ -55,14 +55,21 @@ Basic Text Analysis:
 
 ### Part 2: Descriptive text analysis using R
 
-*  [Descriptive analysis of texts](http://htmlpreview.github.io/?https://github.com/kbenoit/ITAUR-Short/blob/master/2_descriptive/2_descriptive.html)
-*  **Exercise:** Step through execution of the [.Rmd file](2_descriptive/2_descriptive.Rmd).
+*  [Preparing and processing texts](https://rawgit.com/kbenoit/ITAUR-Short/master/2_descriptive/perparingtexts.html)
+*  [Descriptive analysis of texts](https://rawgit.com/kbenoit/ITAUR-Short/master/2_descriptive/2_descriptive.html)  
+*  **Exercise:** Step through execution of the [2_descriptive.Rmd](2_descriptive/2_descriptive.Rmd) file.
+
+You also might want to look at the following:
+
+*  [More manipulation of texts](https://rawgit.com/kbenoit/ITAUR-Short/master/2_descriptive/text_manipulation.html)  
+
 
 ### Part 3: Advanced analysis and working with other text packages
 
-*  [Advanced analysis and working with other packages](http://htmlpreview.github.io/?https://github.com/kbenoit/ITAUR-Short/blob/master/3_advanced/advanced.html)
+*  [Advanced analysis and working with other packages](https://rawgit.com/kbenoit/ITAUR-Short/master/3_advanced/advanced.html)
 *  **Exercise:** Step through execution of the [.Rmd file](3_advanced/advanced.Rmd)
 *  **Twitter analysis example**, and the instructions for setting up your own Twitter app, in [Twitter.Rmd](3_advanced/Twitter.Rmd). 
+
 
 
 ### Additional Resources

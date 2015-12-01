@@ -101,7 +101,6 @@ selectFeatures(myDfm, stopwords("english"), "remove", valuetype = "fixed")
 
 More examples:
 ```{r}
-
 # removing stopwords
 testText <- "The quick brown fox named Seamus jumps over the lazy dog also named Seamus, with
              the newspaper from a boy named Seamus, in his mouth."
@@ -113,7 +112,7 @@ features(dfm(testCorpus, ngrams = 2, ignoredFeatures = stopwords("english")))
 features(dfm(testCorpus, ngrams = 1:2, ignoredFeatures = stopwords("english")))
 
 ## removing stopwords before constructing ngrams
-tokensAll <- tokenize(toLower(test^#Text), removePunct = TRUE)
+tokensAll <- tokenize(toLower(testText), removePunct = TRUE)
 tokensNoStopwords <- removeFeatures(tokensAll, stopwords("english"))
 tokensNgramsNoStopwords <- ngrams(tokensNoStopwords, 2)
 features(dfm(tokensNgramsNoStopwords, ngrams = 1:2))
