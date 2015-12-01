@@ -55,7 +55,7 @@ Basic Text Analysis:
 
 ### Part 2: Descriptive text analysis using R
 
-*  [Preparing and processing texts](https://rawgit.com/kbenoit/ITAUR-Short/master/2_descriptive/perparingtexts.html)
+*  [Preparing and processing texts](https://rawgit.com/kbenoit/ITAUR-Short/master/2_descriptive/preparingtexts.html)
 *  [Descriptive analysis of texts](https://rawgit.com/kbenoit/ITAUR-Short/master/2_descriptive/2_descriptive.html)  
 *  **Exercise:** Step through execution of the [2_descriptive.Rmd](2_descriptive/2_descriptive.Rmd) file.
 
