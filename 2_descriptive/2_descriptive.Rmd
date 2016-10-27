@@ -1,7 +1,7 @@
 ---
 title: "Preparation and Descriptive Analysis of Texts"
 author: "Kenneth Benoit and Paul Nulty"
-date: "2nd December 2015"
+date: "27 October 2016"
 output: html_document
 ---
 
@@ -11,7 +11,7 @@ Here we will step through the basic elements of preparing a text for analysis.  
 
 ### 1. Tokenization
 
-Tokenization in quanteda is very *conservative*: by default, it only removes separator characters.
+Tokenization in **quanteda** is very *conservative*: by default, it only removes separator characters.
 
 ```{r}
 require(quanteda, quietly = TRUE, warn.conflicts = FALSE)
@@ -59,7 +59,7 @@ test1 <- c(text1 = "England and France are members of NATO and UNESCO",
 toLower(test1)
 toLower(test1, keepAcronyms = TRUE)
 
-test2 <- tokenize(test1, removePunct=TRUE)
+test2 <- tokenize(test1, removePunct = TRUE)
 toLower(test2)
 toLower(test2, keepAcronyms = TRUE)
 ```
@@ -84,7 +84,7 @@ head(toLower(stopwords("arabic")), 20)
 This can be done when creating a dfm:
 ```{r}
 # with English stopwords and stemming
-dfmsInaug2 <- dfm(subset(inaugCorpus, Year>1980),
+dfmsInaug2 <- dfm(subset(inaugCorpus, Year > 1980),
                   ignoredFeatures = stopwords("english"), stem = TRUE)
 ```
 
@@ -148,14 +148,14 @@ identical(features(dfm1), features(dfm2b))
 Dictionary creation is done through the `dictionary()` function, which classes a named list of characters as a dictionary.
 ```{r}
 # import the Laver-Garry dictionary from http://bit.ly/1FH2nvf
-lgdict <- dictionary(file="http://www.kenbenoit.net/courses/essex2014qta/LaverGarry.cat",
-                     format="wordstat")
+lgdict <- dictionary(file = "http://www.kenbenoit.net/courses/essex2014qta/LaverGarry.cat",
+                     format = "wordstat")
 dfm(inaugTexts, dictionary=lgdict)
 
 # import a LIWC formatted dictionary
-liwcdict <- dictionary(file = "http://www.kenbenoit.net/files/LIWC2001_English.dic",
+liwcdict <- dictionary(file = "~/Dropbox/QUANTESS/dictionaries/LIWC/LIWC2015_English_Flat.dic",
                        format = "LIWC")
-dfm(inaugTexts, dictionary=liwcdict)
+dfm(inaugTexts, dictionary = liwcdict)
 ```
 
 We apply dictionaries to a dfm using the `applyDictionary()` function.  Through the `valuetype`, argument, we can match patterns of one of three types: `"glob"`, `"regex"`, or `"fixed"`.
@@ -231,17 +231,14 @@ head(dfm(inaugTexts[1:2], stem = TRUE, verbose = FALSE))
 
 Operates on `character` (vectors), `corpus`, or `tokenizedText` objects,
 
-```{r, eval=FALSE}
+```{r, eval = FALSE}
 ## S3 method for class 'character'
 dfm(x, verbose = TRUE, toLower = TRUE,
   removeNumbers = TRUE, removePunct = TRUE, removeSeparators = TRUE,
   removeTwitter = FALSE, stem = FALSE, ignoredFeatures = NULL,
-  keptFeatures = NULL, matrixType = c("sparse", "dense"),
-  language = "english", thesaurus = NULL, dictionary = NULL,
-  valuetype = c("glob", "regex", "fixed"), dictionary_regex = FALSE, ...)
+  keptFeatures = NULL, language = "english", thesaurus = NULL,
+  dictionary = NULL, valuetype = c("glob", "regex", "fixed"), ...)
 ```
-
-
 
 
 quateda has a number of descriptive statistics available for reporting on texts.  The **simplest of these** is through the `summary()` method:
@@ -286,20 +283,21 @@ We can **identify documents and terms that are similar to one another**, using `
 presDfm <- dfm(inaugCorpus, ignoredFeatures = stopwords("english"))
 # compute some document similarities
 similarity(presDfm, "1985-Reagan", n=5, margin="documents")
-similarity(presDfm, c("2009-Obama" , "2013-Obama"), n=5, margin="documents", method = "cosine")
-similarity(presDfm, c("2009-Obama" , "2013-Obama"), n=5, margin="documents", method = "Hellinger")
-similarity(presDfm, c("2009-Obama" , "2013-Obama"), n=5, margin="documents", method = "eJaccard")
+similarity(presDfm, c("2009-Obama" , "2013-Obama"), n = 5, margin = "documents", method = "cosine")
+similarity(presDfm, c("2009-Obama" , "2013-Obama"), n = 5, margin = "documents", method = "Hellinger")
+similarity(presDfm, c("2009-Obama" , "2013-Obama"), n = 5, margin = "documents", method = "eJaccard")
 
 # compute some term similarities
-similarity(presDfm, c("fair", "health", "terror"), method="cosine")
+lapply(similarity(presDfm, c("fair", "health", "terror"), margin = "features", method = "cosine"), head)
 ```
 
 And this can be used for **clustering documents**:
 ```{r, fig.height=6, fig.width=10}
 data(SOTUCorpus, package="quantedaData")
-presDfm <- dfm(subset(SOTUCorpus, as.numeric(year)>1981), verbose=FALSE, stem=TRUE,
-               ignoredFeatures=stopwords("english", verbose=FALSE))
-presDfm <- trim(presDfm, minCount=5, minDoc=3)
+presDfm <- dfm(subset(SOTUCorpus, Date > "1981-01-01"), stem = TRUE,
+               ignoredFeatures = stopwords("english"), 
+               verbose = FALSE)
+presDfm <- trim(presDfm, minCount = 5, minDoc = 3)
 # hierarchical clustering - get distances on normalized dfm
 presDistMat <- dist(as.matrix(weight(presDfm, "relFreq")))
 # hierarchical clustering the distance object
@@ -314,10 +312,11 @@ Or we could look at **term clustering** insteadd:
 ```{r, fig.height=8, fig.width=12}
 # word dendrogram with tf-idf weighting
 wordDfm <- sort(weight(presDfm, "tfidf"))
-wordDfm <- t(wordDfm)[1:100,]  # because transposed
+wordDfm <- removeFeatures(wordDfm, "u.") # because it's oddly there
+wordDfm <- t(wordDfm)[1:100, ]  # because transposed
 wordDistMat <- dist(wordDfm)
 wordCluster <- hclust(wordDistMat)
-plot(wordCluster, xlab="", main="tf-idf Frequency weighting")
+plot(wordCluster, xlab = "", main = "tf-idf Frequency weighting")
 ```
 
 Finally, there are number of helper functions to extract information from quanteda objects:

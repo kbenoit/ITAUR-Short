@@ -19,8 +19,6 @@ install.packages("quanteda", dependencies = TRUE)
 devtools::install_github("kbenoit/quantedaData")
 ```
 
-Note that on **Windows platforms**, it is also recommended that you install the [RTools suite](https://cran.r-project.org/bin/windows/Rtools/), and for **OS X**, that you install [XCode](https://itunes.apple.com/gb/app/xcode/id497799835?mt=12) from the App Store.
-
 
 #### Test your setup
 

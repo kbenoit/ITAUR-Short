@@ -1,7 +1,7 @@
 ---
 title: "Setup test"
 author: "Kenneth Benoit and Paul Nulty"
-date: "30th November 2015"
+date: "27 October 2016"
 output: html_document
 ---
 
@@ -18,8 +18,6 @@ install.packages("quanteda", dependencies = TRUE)
 ## the devtools package is required to install quanteda from Github
 devtools::install_github("kbenoit/quantedaData")
 ```
-
-Note that on **Windows platforms**, it is also recommended that you install the [RTools suite](https://cran.r-project.org/bin/windows/Rtools/), and for **OS X**, that you install [XCode](https://itunes.apple.com/gb/app/xcode/id497799835?mt=12) from the App Store.
 
 
 #### Test your setup

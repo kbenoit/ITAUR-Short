@@ -1,7 +1,7 @@
 ---
 title: "Advanced Text Analysis and Extensions"
 author: "Kenneth Benoit and Paul Nulty"
-date: "30th November 2015"
+date: "27 October 2016"
 output: html_document
 ---
 
@@ -21,9 +21,12 @@ require(lubridate)
 require(dplyr)
 tweetSample <- mutate(tweetSample, day = yday(created_at))
 tweetSample <- mutate(tweetSample, dayDate = as.Date(day-1, origin = "2014-01-01"))
-juncker <- filter(tweetSample, grepl('juncker', text, ignore.case=TRUE)) %>% mutate(kand='Juncker')
-schulz <- filter(tweetSample, grepl('schulz', text, ignore.case=TRUE))  %>% mutate(kand='Schulz')
-verhof <- filter(tweetSample, grepl('verhofstadt', text, ignore.case=TRUE)) %>% mutate(kand='Verhofstadt')
+juncker <- filter(tweetSample, grepl('juncker', text, ignore.case=TRUE)) %>%
+    mutate(kand='Juncker')
+schulz <- filter(tweetSample, grepl('schulz', text, ignore.case=TRUE)) %>%
+    mutate(kand='Schulz')
+verhof <- filter(tweetSample, grepl('verhofstadt', text, ignore.case=TRUE)) %>%
+    mutate(kand='Verhofstadt')
 spitzAll <- bind_rows(juncker, schulz, verhof)
 ```
 
@@ -99,4 +102,16 @@ quantdfm <- dfm(mycorpus, verbose=FALSE, stem=TRUE,
 ldadfm <- convert(quantdfm, to="topicmodels")
 lda <- LDA(ldadfm, control = list(alpha = 0.1), k=20)
 terms(lda, 10)
+```
+
+```{r}
+require(stm)
+data(moviesCorpus, package = "quantedaData")
+summary(moviesCorpus, 5)
+movies_dfm <- dfm(moviesCorpus, ignoredFeatures = c(stopwords("SMART")), stem = TRUE)
+movies_dfm_stm <- convert(movies_dfm, to = "stm", 
+                          docvars = data.frame(sentiment = docvars(moviesCorpus, "Sentiment")))
+stm_fittedmodel <- stm(movies_dfm_stm$documents, movies_dfm_stm$vocab, K = 20, 
+                       interactions = FALSE, verbose = FALSE)
+labelTopics(stm_fittedmodel)
 ```

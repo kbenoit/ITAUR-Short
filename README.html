@@ -93,7 +93,6 @@ button.code-folding-btn:focus {
 </style>
 
 
-
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
@@ -119,14 +118,18 @@ $(document).ready(function () {
 </div>
 
 
-<div id="quantitative-text-analysis-using-r-short-course" class="section level2">
-<h2>Quantitative Text Analysis Using R: Short Course</h2>
+<div id="quantitative-text-analysis-using-r-the-short-version" class="section level2">
+<h2>Quantitative Text Analysis Using R: The Short Version</h2>
 <p><a href="kbenoit@lse.ac.uk">Kenneth Benoit</a>, Department of Methodology, LSE<br />
 <a href="p.nulty@lse.ac.uk">Paul Nulty</a>, Department of Methodology, LSE</p>
-<p>Previously presented at:<br />
-* <a href="http://www.gesis.org/css-wintersymposium/program/workshops-tutorials/quantitative-text-analysis-using-r/">GESIS Computational Social Science Winter Symposium, Köln (Cologne), 1 December 2015</a></p>
+<p>Previously presented at:</p>
+<ul>
+<li><a href="http://www.gesis.org/css-wintersymposium/program/workshops-tutorials/quantitative-text-analysis-using-r/">GESIS Computational Social Science Winter Symposium, Köln (Cologne), 1 December 2015</a><br />
+</li>
+<li>Princeton University, 27 October 2016</li>
+</ul>
 <p><strong>Version:</strong> 27 October 2016</p>
-<p>This repository contains the workshop materials for a short workshop format [Quantitative to Text Analysis Using R]. This project is supported through European Research Council grant ERC-2011-StG 283794-QUANTESS.</p>
+<p>This repository contains the workshop materials for a short workshop format <em>Quantitative to Text Analysis Using R</em>. This project is supported through European Research Council grant ERC-2011-StG 283794-QUANTESS.</p>
 <div id="instructions-for-using-this-resource" class="section level3">
 <h3>Instructions for using this resource</h3>
 <p>You have three options for downloading the course material found on this page:</p>
@@ -141,7 +144,7 @@ $(document).ready(function () {
 <h3>Objectives</h3>
 <p>This workshop covers how to perform common text analysis and natural language processing tasks using R. When used properly, R is a fast and powerful tool for managing even very large text analysis tasks.</p>
 <p>The course consists of instructor presentations in three sets, followed by exercises that students are meant to do in class. Computers should be available, but we suggest you bring your own.</p>
-<p>We will cover how to format and input source texts, how to structure their metadata, and how to prepare them for analysis. This includes common tasks such as tokenisation, including constructing ngrams and “skip-grams”, removing stopwords, stemming words, and other forms of feature selection. We show how to: get summary statistics from text, search for and analyse keywords and phrases, analyse text for lexical diversity and readability, detect collocations, apply dictionaries, and measure term and document associations using distance measures. Our analysis covers basic text-related data processing in the R base language, but most relies on the “quanteda” (<a href="https://github.com/kbenoit/quanteda" class="uri">https://github.com/kbenoit/quanteda</a>) package for the quantitative analysis of textual data. We also cover how to pass the structured objects from quanteda into other text analytic packages for doing topic modelling, latent semantic analysis, regression models, and other forms of machine learning.</p>
+<p>We will cover how to format and input source texts, how to structure their metadata, and how to prepare them for analysis. This includes common tasks such as tokenisation, including constructing ngrams and “skip-grams”, removing stopwords, stemming words, and other forms of feature selection. We show how to: get summary statistics from text, search for and analyse keywords and phrases, analyse text for lexical diversity and readability, detect collocations, apply dictionaries, and measure term and document associations using distance measures. Our analysis covers basic text-related data processing in the R base language, but most relies on the <a href="https://github.com/kbenoit/quanteda"><strong>quanteda</strong></a> package for the quantitative analysis of textual data. We also cover how to pass the structured objects from quanteda into other text analytic packages for doing topic modelling, latent semantic analysis, regression models, and other forms of machine learning.</p>
 </div>
 <div id="prerequisites" class="section level3">
 <h3>Prerequisites</h3>
@@ -161,7 +164,14 @@ $(document).ready(function () {
 <li><a href="1_getting_started/1_getting_started.Rmd">Getting started, text import, and basic analysis</a></li>
 <li>Study this <a href="1_getting_started/workflow.Rmd"><strong>recommended work flow</strong></a> document.</li>
 <li><strong>Exercise:</strong> Step through execution of the <a href="1_getting_started/1_getting_started.Rmd">.Rmd file</a></li>
-<li>Sample data files: <a href="https://github.com/kbenoit/ITAUR/blob/master/data/SOTU_metadata.csv">SOTU_metadata.csv</a>, <a href="https://github.com/kbenoit/ITAUR/blob/master/data/inaugTexts.csv">inaugTexts.csv</a>, <a href="https://github.com/kbenoit/ITAUR/blob/master/data/tweetSample.RData">tweetSample.RData</a></li>
+<li>Sample data files:
+<ul>
+<li><a href="https://github.com/kbenoit/ITAUR/blob/master/data/SOTU_metadata.csv">SOTU_metadata.csv</a><br />
+</li>
+<li><a href="https://github.com/kbenoit/ITAUR/blob/master/data/inaugTexts.csv">inaugTexts.csv</a><br />
+</li>
+<li><a href="https://github.com/kbenoit/ITAUR/blob/master/data/tweetSample.RData">tweetSample.RData</a></li>
+</ul></li>
 </ul>
 </div>
 <div id="part-2-descriptive-text-analysis-using-r" class="section level3">
@@ -183,6 +193,18 @@ $(document).ready(function () {
 <li><strong>Exercise:</strong> Step through execution of the <a href="3_advanced/advanced.Rmd">.Rmd file</a></li>
 <li><strong>Twitter analysis example</strong>, and the instructions for setting up your own Twitter app, in <a href="3_advanced/Twitter.Rmd">Twitter.Rmd</a>.</li>
 </ul>
+<p>Extension packages:</p>
+<ul>
+<li><a href="https://github.com/kbenoit/LIWCalike"><strong>LIWCalike</strong></a>: replicate the Linguistic Inquiry and Word Count program’s functionality.<br />
+</li>
+<li><a href="https://github.com/kbenoit/readtext"><strong>readtext</strong></a>: read texts into R (replaces the <code>textfile()</code> function from <strong>quanteda</strong>).<br />
+</li>
+<li><a href="http://cran.r-project.org/package=preText"><strong>preText</strong></a>: Diagnostics to assess the effects of text “pre-processing” decisions.</li>
+</ul>
+</div>
+<div id="upcoming-api-revision-in-quanteda-0.9.9" class="section level3">
+<h3>Upcoming API revision in <strong>quanteda</strong> &gt;= 0.9.9</h3>
+<p>See <a href="https://github.com/kbenoit/quanteda/blob/quanteda0_9_9/API.md">API.md</a> for full details.</p>
 </div>
 <div id="additional-resources" class="section level3">
 <h3>Additional Resources</h3>
@@ -210,7 +232,6 @@ $(document).ready(function () {
 $(document).ready(function () {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 });
-
 
 </script>
 
