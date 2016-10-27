@@ -1,14 +1,15 @@
-## Quantitative Text Analysis Using R
-
-
-#### GESIS Computational Social Science Winter Symposium, Köln (Cologne), 1 December 2015
+## Quantitative Text Analysis Using R: The Short Version
 
 [Kenneth Benoit](kbenoit@lse.ac.uk), Department of Methodology, LSE  
 [Paul Nulty](p.nulty@lse.ac.uk), Department of Methodology, LSE  
 
-**Version:** 1 December 2015
+Previously presented at:  
+*  [GESIS Computational Social Science Winter Symposium, Köln (Cologne), 1 December 2015](http://www.gesis.org/css-wintersymposium/program/workshops-tutorials/quantitative-text-analysis-using-r/)
 
-This repository contains the workshop materials for the short workshop [Quantitative to Text Analysis Using R](http://www.gesis.org/css-wintersymposium/program/workshops-tutorials/quantitative-text-analysis-using-r/) taught on December 1, 2015 by Kenneth Benoit and Paul Nulty.  This workshop is part of the pre-conference training sessions of the GESIS Computational Social Science Winter Symposium, 1-3 December 2015.  Ken Benoit and Paul Nulty's involvement is supported through European Research Council grant ERC-2011-StG 283794-QUANTESS.
+
+**Version:** 27 October 2016
+
+This repository contains the workshop materials for a short workshop format [Quantitative to Text Analysis Using R].  This project is supported through European Research Council grant ERC-2011-StG 283794-QUANTESS.
 
 ### Instructions for using this resource ###
 
